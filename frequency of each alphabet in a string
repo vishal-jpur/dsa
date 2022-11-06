@@ -1,0 +1,19 @@
+//frequency of each alphabet in a string
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+   string s="iamsogoodatart";
+   map<char,int> m;
+   
+   for(int i=0;i<s.size();i++)
+   {
+      m[s[i]]++;
+   }
+   
+   for(auto i:m)
+   {
+      cout<<i.first<<" "<<i.second<<endl;
+   }
+}
