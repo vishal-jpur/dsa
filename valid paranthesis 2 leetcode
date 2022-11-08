@@ -1,0 +1,45 @@
+class Solution {
+public:
+    bool validPalindrome(string s)
+     {
+        int l=0,r=s.size()-1;
+        int k1=0;
+       while(l<=r)
+       {
+           if(s[l]==s[r])
+           {
+               l++;
+               r--;
+           }
+           else
+           {
+               k1++;
+               r--;
+           }
+       }
+        l=0,r=s.size()-1;
+        int k2=0;
+         while(l<=r)
+       {
+           if(s[l]==s[r])
+           {
+               l++;
+               r--;
+           }
+           else
+           {
+               k2++;
+                l++;
+           }
+       }
+
+
+
+        int k=min(k1,k2);
+
+       if(k<2)
+       return true;
+       else
+       return false;
+    }
+};
